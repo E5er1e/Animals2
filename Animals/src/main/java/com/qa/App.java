@@ -22,7 +22,27 @@ public class App
         Cat cat3 = new Cat();
         System.out.println(cat3);
 
+        System.out.println("wildcat");
 
+        Wild wildcat = new Wild();
+        System.out.println("hello" + wildcat);
+
+        Domestic domesticCat = new Domestic();
+        System.out.println(domesticCat);
+
+
+
+
+        Cat [] cats = {new Cat(), new Cat("Winnie", "brown","British Blue"), new Cat("Cosmo", "Grey", "tabby")};
+        for (Cat c:cats){
+            c.setAge(5);
+            System.out.println(c);
+        }
+        Wild [] wildcats = {new Wild(), new Wild("Tiger", "brown"), new Wild("Lion", "Yellow")};
+        for (Wild w:wildcats){
+            System.out.println(w);
 
     }
+
 }
+    }

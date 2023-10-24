@@ -2,6 +2,14 @@ package com.qa;
 
 public class Cat {
 
+    public String meow(){
+        String pitch = null;
+        String terror_level = null;
+        String Loudness = null;
+        return pitch + terror_level + Loudness;
+    }
+
+
     public Cat() {
         this("Anonymous", "White");
 
@@ -11,7 +19,7 @@ public class Cat {
 //        this.gender = Gender.FEMALE;
 //        this.age = 0;
     }
-    public Cat(String name, String breed, String Colour, Gender gender, int age)
+    public Cat(String name, String breed, String colour, Gender gender, int age)
     {
         this.name = name;
         this.breed = breed;
@@ -21,17 +29,20 @@ public class Cat {
         
     }
     //Overloading the constructor
-    public Cat(String inputName, String inputColour)
+    public Cat(String inputName, String inputColour, String inputBreed)
     {
 //        this.name = inputName;
 //        this.colour = inputColour;
-        this(inputName, "bengal", inputColour, Gender.FEMALE, 0);
+        this(inputName,inputBreed , inputColour, Gender.FEMALE, 0);
     }
     private String breed;
     private String name;
     private String colour;
     private Gender gender;
     private int age;
+
+    public Cat(String alice, String ginger) {
+    }
 
     public String getBreed() {
         return breed;
