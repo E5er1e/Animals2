@@ -5,7 +5,7 @@ package com.qa;
  *
  */
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidExceptions {
         Cat cat1 = new Cat();
         cat1.setName("Bob");
         System.out.println("Name is " + cat1.getName());
@@ -32,6 +32,8 @@ public class App {
         for (Cat c : cats) {
             c.setAge(5);
             System.out.println(c);
+            System.out.println(c.LongWalk());
+            System.out.println(c.ShortWalk());
         }
         Wild[] wildcats = {new Wild(), new Wild("Tiger", "brown"), new Wild("Lion", "Yellow")};
         for (Wild w : wildcats) {
@@ -41,5 +43,26 @@ public class App {
         for (Animals a : animals) {
             a.AnimalSpeech();
         }
+
+        System.out.println(dead(true));
+        System.out.println(dead(false));
+
+        
+    }
+
+    private static String dead(boolean a) throws InvalidExceptions {
+        if (a = true) {
+            throw new InvalidExceptions("YOUR ANIMALS DEAD DIMWIT DONT TRY WALK IT " + a);
+        }
+        else {
+            a = false;
+                return "Your Animals Alive feel free to walk them" ;
+        }
     }
 }
+
+
+
+
+
+
