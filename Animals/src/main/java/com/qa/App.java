@@ -44,22 +44,34 @@ public class App {
             a.AnimalSpeech();
         }
 
+        Dog dogA = new Dog();
+        try {
+            dogA.setDogsize(0);
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+
         System.out.println(dead(true));
         System.out.println(dead(false));
 
-        
+
     }
 
     private static String dead(boolean a) throws InvalidExceptions {
         if (a = true) {
             throw new InvalidExceptions("YOUR ANIMALS DEAD DIMWIT DONT TRY WALK IT " + a);
-        }
-        else {
+        } else {
             a = false;
-                return "Your Animals Alive feel free to walk them" ;
+            return "Your Animals Alive feel free to walk them";
         }
     }
 }
+
+  //  private static String HowManyFingersAMIHoldingUp(int a) throws InvalidExceptions {
+  //      try ({n "Your Animals Alive feel free to walk them" ;
+    //    }
+    //}
+//}
 
 
 
