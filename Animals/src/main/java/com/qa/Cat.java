@@ -1,6 +1,7 @@
 package com.qa;
 
-public class Cat {
+public class Cat extends Animals {
+
 
     public String meow(){
         String pitch = null;
@@ -90,5 +91,10 @@ public class Cat {
         String output = String.format("%s is a %s %s. Their gender is %s. They are %d years old!",getName(), getColour(), getBreed(), getGender(), getAge() );
         return output;
 
+    }
+
+    @Override
+    public void AnimalSpeech() {
+        System.out.println("MEOWWWWWWWWWWWWWWWWWWWW MEOWWWWWW - if you can't tell i'm a cat");
     }
 }

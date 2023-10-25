@@ -4,10 +4,8 @@ package com.qa;
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class App {
+    public static void main(String[] args) {
         Cat cat1 = new Cat();
         cat1.setName("Bob");
         System.out.println("Name is " + cat1.getName());
@@ -30,19 +28,18 @@ public class App
         Domestic domesticCat = new Domestic();
         System.out.println(domesticCat);
 
-
-
-
-        Cat [] cats = {new Cat(), new Cat("Winnie", "brown","British Blue"), new Cat("Cosmo", "Grey", "tabby")};
-        for (Cat c:cats){
+        Cat[] cats = {new Cat(), new Cat("Winnie", "brown", "British Blue"), new Cat("Cosmo", "Grey", "tabby")};
+        for (Cat c : cats) {
             c.setAge(5);
             System.out.println(c);
         }
-        Wild [] wildcats = {new Wild(), new Wild("Tiger", "brown"), new Wild("Lion", "Yellow")};
-        for (Wild w:wildcats){
+        Wild[] wildcats = {new Wild(), new Wild("Tiger", "brown"), new Wild("Lion", "Yellow")};
+        for (Wild w : wildcats) {
             System.out.println(w);
-
+        }    //Type     Name    //New type ///Inside array
+        Animals[] animals = new Animals[]{new Cat(), new Dog()};
+        for (Animals a : animals) {
+            a.AnimalSpeech();
+        }
     }
-
 }
-    }
