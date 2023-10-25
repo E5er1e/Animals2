@@ -1,6 +1,6 @@
 package com.qa;
 
-public class Cat extends Animals {
+public class Cat extends Animals implements Walkable {
 
 
     public String meow(){
@@ -96,5 +96,20 @@ public class Cat extends Animals {
     @Override
     public void AnimalSpeech() {
         System.out.println("MEOWWWWWWWWWWWWWWWWWWWW MEOWWWWWW - if you can't tell i'm a cat");
+    }
+
+    @Override
+    public String ShortWalk() {
+        return this.colour + " Cat is going on a ShortWalk";
+    }
+
+    @Override
+    public String Run() {
+        return this.colour + " Cat is going on a run";
+    }
+
+    @Override
+    public String LongWalk() {
+        return this.colour + " Cat is going on a Long Walk";
     }
 }
