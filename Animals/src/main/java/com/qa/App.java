@@ -46,35 +46,18 @@ public class App {
 
         Dog dogA = new Dog();
         try {
-            dogA.setDogsize(0);
+            dogA.setDogsize(5);
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
-
-        System.out.println(dead(true));
-        System.out.println(dead(false));
-
-
-    }
-
-    private static String dead(boolean a) throws InvalidExceptions {
-        if (a = true) {
-            throw new InvalidExceptions("YOUR ANIMALS DEAD DIMWIT DONT TRY WALK IT " + a);
-        } else {
-            a = false;
-            return "Your Animals Alive feel free to walk them";
+        dogA.setDead(true);
+        try {
+            dogA.setWalkLength(50);
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+        finally{
+            System.out.println("WELL DONE YOU'VE MADE IT HERE");
         }
     }
 }
-
-  //  private static String HowManyFingersAMIHoldingUp(int a) throws InvalidExceptions {
-  //      try ({n "Your Animals Alive feel free to walk them" ;
-    //    }
-    //}
-//}
-
-
-
-
-
-

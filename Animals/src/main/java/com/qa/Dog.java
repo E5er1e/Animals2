@@ -9,15 +9,21 @@ public class Dog extends Animals
     public int Dogsize;
     public int WalkLength;
     public int WalkLengthMax;
+    public boolean dead;
+
+    public void setDead(boolean dead) {
+
+        this.dead = dead;
+
+    }
+
+    public boolean getDead() {
+        return true;
+    }
+
 
     public Dog() {
         this(0);
-
-//        this.breed = "bengal";
-//        this.name = "Anonymous";
-//        this.colour = "white";
-//        this.gender = Gender.FEMALE;
-//        this.age = 0;
     }
     public Dog(int Dogsize)
     {
@@ -39,7 +45,6 @@ public class Dog extends Animals
             System.out.println("Maximum time to walk a Large sized dog is 240 Minutes");
         }
         else
-      //      System.out.println("Please add DogSize in pounds");
         throw new InvalidExceptions("DOG SIZE GIVEN IS BELOW 1 pound");
     }
 
@@ -54,8 +59,11 @@ public class Dog extends Animals
     public int getDogsize() {
         return Dogsize;
     }
-    public void setWalkLength(int walkLength) {
+    public void setWalkLength(int walkLength) throws InvalidExceptions {
         WalkLength = walkLength;
+        if (dead == true) {
+            throw new InvalidExceptions("THE DOGS DEAD, IT CAN'T WALK. PLEASE DO NOT ATTEMPT");
+        }
     }
     public int getWalkLength() {
         return WalkLength;
